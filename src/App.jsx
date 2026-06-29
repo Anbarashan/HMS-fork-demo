@@ -8,6 +8,9 @@
   import PatientProfile from './pages/receptionist/PatientProfile'
   import PatientRegistration from './pages/receptionist/PatientRegistration'
   import AppointmentManagement from './pages/receptionist/AppointmentManagement'
+  import QueueManagement from './pages/receptionist/QueueManagement'
+  import BillingCollection from './pages/receptionist/BillingCollection'
+  import FollowUpManagement from './pages/receptionist/FollowUpManagement'
 
   //pharmacy
   import PharmacyDashboard from './pages/pharmacy/PharmacyDashboard'
@@ -178,6 +181,21 @@
           <Route path="/receptionist/appointments" element={
             <ProtectedRoute allowedRole="receptionist">
               <AppointmentManagement />
+            </ProtectedRoute>
+          }/>
+          <Route path="/receptionist/queue" element={
+            <ProtectedRoute allowedRole="receptionist">
+              <QueueManagement />
+            </ProtectedRoute>
+          }/>
+          <Route path="/receptionist/billing" element={
+            <ProtectedRoute allowedRole="receptionist">
+              <BillingCollection />
+            </ProtectedRoute>
+          }/>
+          <Route path="/receptionist/follow-up" element={
+            <ProtectedRoute allowedRole="receptionist">
+              <FollowUpManagement />
             </ProtectedRoute>
           }/>
 
